@@ -13,7 +13,7 @@ body {
 
 #head>img {
     min-width: 570px;
-    max-width: 60vw;
+    max-width: 55vw;
 }
 
 #head>img:nth-child(1) {
