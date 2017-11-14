@@ -1,2 +1,2 @@
 # Sticker
-For stickerweb
+https://clementliu.github.io/Sticker/
