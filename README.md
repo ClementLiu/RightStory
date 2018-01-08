@@ -1,2 +1,2 @@
 # Sticker
-https://clementliu.github.io/Sticker/
+https://clementliu.github.io/RightStory/
