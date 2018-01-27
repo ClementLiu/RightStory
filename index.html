@@ -3,163 +3,206 @@
 
 <head>
     <title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/skeleton.css"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    // add font size chang begin
-    var sizeForFont1, sizeForFont2, testName;
-    jQuery(document).ready(function() {
-        // add to result 
-
-        $('.slider').each(function(index, el) {
-            $(".centerDiv").append('<span ' + 'alt="' + $(this).next().text() + '">' + $(this).next().text() + '</span>');
-            $(".centerDiv").append('<span ' + 'alt="' + $(this).prev().text() + '">' + $(this).prev().text() + '</span>');
-        });
-        // check
-        $('.holder').each(function(index, el) {
-            $(".centerDiv").append('<span ' + 'alt="' + $(this).prev().text() + '">' + $(this).prev().text() + '</span>');
-            $("[alt='" + $(this).prev().text() + "']").css('display', 'none');
-        });
-        // font size change begin
-        $('.slider').on("change mousemove", function() {
-            console.log($(this).val());
-            sizeForFont1 = 1 + ($(this).val() - 50) / 100;
-            sizeForFont2 = 1 - ($(this).val() - 50) / 100;
-            $(this).next().css('fontSize', sizeForFont1 + 'em');
-            $("[alt='" + $(this).next().text() + "']").css('fontSize', sizeForFont1 + 1 + 'em');
-            $(this).prev().css('fontSize', sizeForFont2 + 'em');
-            $("[alt='" + $(this).prev().text() + "']").css('fontSize', sizeForFont2 + 1 + 'em');
-        });
-        $("input[type='checkbox']").click(function() {
-            /* body... */
-            if ($(this).is(":checked")) {
-                $("[alt='" + $(this).parent().prev().text() + "']").css('display', 'initial');
-                // console.log($(this).parent().prev().text());
-                // it is checked
-            } else {
-                $("[alt='" + $(this).parent().prev().text() + "']").css('display', 'none');
-            }
-
-        });
-        // animation 
-        $(".buttonCancle").click(function(event) {
-            $(this).animate({ opacity: 0 }, 4000);
-            $(".centerDiv").animate({ opacity: 0, width: 0 }, 1500);
-            $(".enjoy").delay(3000).animate({ opacity: 1 }, 2000);
-        });
-    });
-    // font size change end
-    </script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/llj7xnr.css">
 </head>
 <!-- start? -->
 
 <body>
     <div id="head">
-        <img class="jumbotron" src="head1.svg" alt="Header">
-        <img class="jumbotron" src="head2.svg" alt="Header">
-        <h5 class="buttontText"><u>Hack and Customize your own story </u></h5>
+        <img src="https://farm5.staticflickr.com/4711/38965148245_049d25638a_b.jpg" width="1024" height="728" alt="HeadImg">
     </div>
     <div class="manifest">
         <div class="header">
             <span>Story Setting</span>
         </div>
         <div class="alert">
-            <span>* Accompanied by a parent or guardian!</span>
+            <span>Accompanied by a parent or guardian!</span>
         </div>
     </div>
     <!-- slider bar begin -->
     <div class="selector">
         <div class="slidbar1">
-            <p class="sliderName">Scicence</p>
-            <input class="slider" type="range" step="0.1" name="Science">
-            <p class="sliderName">Religion</p>
+            <div class="tube leftTube"></div>
+            <div class="sliderComb">
+                <div class="sliderNamePart">
+                    <p class="sliderName">Scicence</p>
+                    <input class="slider" type="range" step="0.1" name="Science">
+                    <p class="sliderName">Religion</p>
+                </div>
+            </div>
+            <div class="tube rightTube"></div>
         </div>
         <div class="slidbar1">
-            <p class="sliderName">capitalism</p>
-            <input class="slider" type="range" step="0.1" name="Science">
-            <p class="sliderName">communism</p>
+            <div class="tube leftTube"></div>
+            <div class="sliderComb">
+                <div class="sliderNamePart">
+                    <p class="sliderName">capitalism</p>
+                    <input class="slider" type="range" step="0.1" name="Science">
+                    <p class="sliderName">communism</p>
+                </div>
+            </div>
+            <div class="tube rightTube"></div>
         </div>
         <div class="slidbar1">
-            <p class="sliderName">Republican</p>
-            <input class="slider" type="range" step="0.1" name="Science">
-            <p class="sliderName">Democracy</p>
+            <div class="tube leftTube"></div>
+            <div class="sliderComb">
+                <div class="sliderNamePart">
+                    <p class="sliderName">Republican</p>
+                    <input class="slider" type="range" step="0.1" name="Science">
+                    <p class="sliderName">Democracy</p>
+                </div>
+            </div>
+            <div class="tube rightTube"></div>
         </div>
         <div class="slidbar1">
-            <p class="sliderName">nationalism</p>
-            <input class="slider" type="range" step="0.1" name="Science">
-            <p class="sliderName">Cosmopolitanism</p>
+            <div class="tube leftTube"></div>
+            <div class="sliderComb">
+                <div class="sliderNamePart">
+                    <p class="sliderName">nationalism</p>
+                    <input class="slider" type="range" step="0.1" name="Science">
+                    <p class="sliderName">Cosmopolitanism</p>
+                </div>
+            </div>
+            <div class="tube rightTube"></div>
         </div>
         <div class="slidbar1">
-            <p class="sliderName">LGBTQ</p>
-            <input class="slider" type="range" step="0.1" name="Science">
-            <p class="sliderName">Heterosexual</p>
+            <div class="tube leftTube"></div>
+            <div class="sliderComb">
+                <div class="sliderNamePart">
+                    <p class="sliderName">LGBTQ</p>
+                    <input class="slider" type="range" step="0.1" name="Science">
+                    <p class="sliderName">Heterosexual</p>
+                </div>
+            </div>
+            <div class="tube rightTube"></div>
         </div>
         <div class="slidbar1">
-            <p class="sliderName">mysticism</p>
-            <input class="slider" type="range" step="0.1" name="Science">
-            <p class="sliderName">materialism</p>
+            <div class="tube leftTube"></div>
+            <div class="sliderComb">
+                <div class="sliderNamePart">
+                    <p class="sliderName">mysticism</p>
+                    <input class="slider" type="range" step="0.1" name="Science">
+                    <p class="sliderName">materialism</p>
+                </div>
+            </div>
+            <div class="tube rightTube"></div>
         </div>
         <div class="slidbar1">
-            <p class="sliderName">Female</p>
-            <input class="slider" type="range" step="0.1" name="Science">
-            <p class="sliderName">Male</p>
+            <div class="tube leftTube"></div>
+            <div class="sliderComb">
+                <div class="sliderNamePart">
+                    <p class="sliderName">Female</p>
+                    <input class="slider" type="range" step="0.1" name="Science">
+                    <p class="sliderName">Male</p>
+                </div>
+            </div>
+            <div class="tube rightTube"></div>
         </div>
         <div class="slidbar1">
-            <p class="sliderName">Pessimistic</p>
-            <input class="slider" type="range" step="0.1" name="Science">
-            <p class="sliderName">Optimistic</p>
+            <div class="tube leftTube"></div>
+            <div class="sliderComb">
+                <div class="sliderNamePart">
+                    <p class="sliderName">Pessimistic</p>
+                    <input class="slider" type="range" step="0.1" name="Science">
+                    <p class="sliderName">Optimistic</p>
+                </div>
+            </div>
+            <div class="tube rightTube"></div>
         </div>
         <div class="slidbar1">
-            <p class="sliderName">Temperamental</p>
-            <input class="slider" type="range" step="0.1" name="Science">
-            <p class="sliderName">Predictable</p>
+            <div class="tube leftTube"></div>
+            <div class="sliderComb">
+                <div class="sliderNamePart">
+                    <p class="sliderName">Temperamental</p>
+                    <input class="slider" type="range" step="0.1" name="Science">
+                    <p class="sliderName">Predictable</p>
+                </div>
+            </div>
+            <div class="tube rightTube"></div>
         </div>
         <!-- slider bar end -->
         <!-- check bar begin -->
         <div class="checkbar1">
-            <p class="sliderName">verbal abuse</p>
-            <div class="holder">
-                <input type="checkbox" value="None" id="check0" name="check" class="check-ios" />
-                <label for="check0"></label>
-                <span></span>
+            <div class="tube leftTube"></div>
+            <div class="checkCombo">
+                <div class="checkNamePart">
+                    <p class="sliderName">verbal abuse</p>
+                    <div class="holder">
+                        <input type="checkbox" value="None" id="check0" name="check" class="check-ios" />
+                        <label for="check0"></label>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="checkbar1">
-            <p class="sliderName">Consumerism</p>
-            <div class="holder">
-                <input type="checkbox" value="None" id="check1" name="check" class="check-ios" />
-                <label for="check1"></label>
-                <span></span>
+            <div class="tube leftTube"></div>
+            <div class="checkCombo">
+                <div class="checkNamePart">
+                    <p class="sliderName">Consumerism</p>
+                    <div class="holder">
+                        <input type="checkbox" value="None" id="check1" name="check" class="check-ios" />
+                        <label for="check1"></label>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="checkbar1">
-            <p class="sliderName">Sexual harassment</p>
-            <div class="holder">
-                <input type="checkbox" value="None" id="check2" name="check" class="check-ios" />
-                <label for="check2"></label>
-                <span></span>
+            <div class="tube leftTube"></div>
+            <div class="checkCombo">
+                <div class="checkNamePart">
+                    <p class="sliderName">Sexual harassment</p>
+                    <div class="holder">
+                        <input type="checkbox" value="None" id="check2" name="check" class="check-ios" />
+                        <label for="check2"></label>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="checkbar1">
-            <p class="sliderName">Terrorism</p>
-            <div class="holder">
-                <input type="checkbox" value="None" id="check3" name="check" class="check-ios" />
-                <label for="check3"></label>
-                <span></span>
+            <div class="tube leftTube"></div>
+            <div class="checkCombo">
+                <div class="checkNamePart">
+                    <p class="sliderName">Terrorism</p>
+                    <div class="holder">
+                        <input type="checkbox" value="None" id="check3" name="check" class="check-ios" />
+                        <label for="check3"></label>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="checkbar1">
-            <p class="sliderName">violence</p>
-            <div class="holder">
-                <input type="checkbox" value="None" id="check4" name="check" class="check-ios" />
-                <label for="check4"></label>
-                <span></span>
+            <div class="tube leftTube"></div>
+            <div class="checkCombo">
+                <div class="checkNamePart">
+                    <p class="sliderName">violence</p>
+                    <div class="holder">
+                        <input type="checkbox" value="None" id="check4" name="check" class="check-ios" />
+                        <label for="check4"></label>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- check bar end -->
+    </div>
+    <div class="manifest">
+        <div class="header">
+            <span>Your Personal Setting</span>
+        </div>
+        <div class="alert">
+            <span>By clicking “Upload” I agree to Right Story’s Terms of Service and Privacy Policy.</span>
+        </div>
     </div>
     <div class="result">
         <div class="centerDiv">

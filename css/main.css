@@ -1,5 +1,5 @@
 body {
-    font-family: "Gill Sans", Times, serif;
+    font-family: "CCMonsterMash", Times, serif;
     font-style: normal;
     font-size: 1em;
 }
@@ -9,27 +9,23 @@ body {
     width: 100%;
     height: 100vh;
     background-color: black;
+    overflow: hidden;
 }
 
 #head>img {
-    min-width: 570px;
-    max-width: 55vw;
-}
-
-#head>img:nth-child(1) {
-    top: 15px;
-    left: 0px;
-    margin-bottom: 10px;
+    /* min-width: 570px; */
+    /* max-width: 55vw; */
+    width: 100%;
+    height: auto;
     position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
 }
 
 
-#head>img:nth-child(2) {
-    bottom: 15px;
-    right: 0px;
-    margin-bottom: 10px;
-    position: absolute;
-}
 
 .buttontText {
     position: absolute;
@@ -39,32 +35,76 @@ body {
 }
 
 .manifest {
+    box-sizing: border-box;
     position: relative;
     top: 0px;
     text-align: center;
+    background-color: black;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
 }
 
 .header {
     width: 100%;
-    background-color: gray;
     padding-top: 30px;
     padding-bottom: 10px;
 }
 
 .header>span {
-    font-size: 2em;
-    text-transform: uppercase;
+    /* Story Setting: */
+    font-family: CCMonsterMash;
+    font-size: 48px;
+    color: #CBCD27;
 }
 
 .alert {
     position: relative;
-    text-align: center;
     padding-bottom: 20px;
     padding-top: 5px;
-    background-color: black;
-    color: white;
-        font-family: "Gill Sans", Times, serif;
+    font-family: Helvetica, sans-serif;
     font-weight: 100;
+    color: #CBCD27;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body css */
+
+.tube {
+    position: absolute;
+    width: 235px;
+    height: 45px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #CBCD27;
+
+    /* Rectangle 2: */
+    border-radius: 100px;
+}
+
+.leftTube {
+    left: -31px;
+}
+
+.rightTube {
+    right: -31px;
 }
 
 .selector {
@@ -76,8 +116,8 @@ body {
     text-transform: uppercase;
 }
 
-div.selector>div>p {
-    color: gray;
+div.selector>div>div>p {
+    color: #CBCD27;
 }
 
 input {
@@ -86,9 +126,77 @@ input {
 
 
 .slidbar1 {
-    height: 95px;
-    padding-top: 20px;
+    height: 122px;
+    /* padding-top: 20px; */
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: table;
+    border-bottom: solid 1px grey;
 }
+
+
+
+.sliderComb {
+    margin-left: 234px;
+    margin-right: 234px;
+    /* Example: */
+    font-family: CCMonsterMash;
+    font-size: 24px;
+    height: 100%;
+}
+
+.sliderNamePart {
+    width: 100%;
+    height: 100%;
+    display: table;
+    padding-top: 21px;
+}
+
+
+
+
+
+
+
+
+
+/* .sliderNamePart>* {
+    display: table-cell;
+    vertical-align: middle;
+} */
+
+.sliderNamePart>p:nth-child(1) {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+.sliderNamePart>p:nth-child(3) {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: right;
+}
+
+body>div.selector>div>div.checkbar1>p {
+    width: 20%;
+    min-width: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -107,11 +215,30 @@ input[type=range] {
     /* Hides the slider so that custom slider can be made */
     width: 48%;
     /* Specific width is required for Firefox. */
+    /* CC customerize */
+    margin-top: 30px;
 }
 
 input[type=range]:focus {
     outline: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -161,6 +288,23 @@ input[type=range]::-webkit-slider-runnable-track {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* All the same stuff for Firefox */
 
 input[type=range]::-moz-range-thumb {
@@ -181,6 +325,23 @@ input[type=range]::-moz-range-track {
     background-color: #a9acb1;
     border-radius: 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -254,39 +415,79 @@ input[type=range]::-ms-tooltip {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* range Ios end*/
 
 .sliderName {
-    width: 13.3333333333%;
+    /* width: 13.3333333333%; */
+    width: 21.333333%;
+
     min-width: 70px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: yellow;
-    border-radius: 10px;
+    color: #CBCD27;
 }
 
-div.selector>div>p:nth-child(1) {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-div.selector>div>p:nth-child(3) {
-    display: inline-block;
-    margin-left: 10px;
-}
 
 
 .checkbar1 {
     min-width: 190px;
-    width: 29vw;
-    height: 70px;
+    width: 33%;
+    height: 122px;
     display: inline-block;
+    position: relative;
+    /* border-bottom: solid 1px grey; */
+    overflow: hidden;
 }
 
-body>div.selector>div.checkbar1>p {
-    width: 20%;
-    min-width: 110px;
+.checkCombo {
+    /* background-color: red; */
+    position: relative;
+    margin-left: 234px;
+    font-family: CCMonsterMash;
+    font-size: 24px;
+    height: 100%;
+    /* right: 0; */
+    margin-right: 0px;
 }
+
+.checkNamePart {
+    padding-top: 31px;
+    display: flex;
+}
+
+.checkNamePart>.sliderName {
+    /* width: 159px; */
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -391,26 +592,46 @@ body>div.selector>div.checkbar1>p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ios check end*/
 
 .result {
-    background-color: gray;
+    background-color: black;
     width: 100%;
     height: 100vh;
     position: relative;
     text-align: center;
+    font-size: 24px;
+    color: #CBCD27;
 }
 
 .centerDiv {
     top: 0;
-    bottom: 0;
+    /* bottom: 0; */
     left: 0;
     right: 0;
     margin: auto;
+    margin-top: 13vh;
     position: absolute;
     width: 70vw;
     height: 40vh;
-    font-size: 2em;
+    font-size: 42px;
 }
 
 .centerDiv span {
@@ -420,6 +641,7 @@ body>div.selector>div.checkbar1>p {
     border: solid 2px yellow;
     border-radius: 1em;
     margin: 10px;
+    line-height: 1em;
 }
 
 .buttonCancle {
@@ -440,13 +662,37 @@ body>div.selector>div.checkbar1>p {
     line-height: 80px;
     text-align: center;
     text-transform: uppercase;
-    background-color: rgba(255, 255, 0, 0.9);
     cursor: pointer;
+
+
+    /* Rectangle 2: */
+    border: 4px solid #FFFFFF;
+    /* Upload to Sticker: */
+    font-family: CCMonsterMash;
+    font-size: 1.2em;
+    color: #FFFFFF;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .buttonCancle{
-	width: 300px;
+    width: 300px;
     height: 100px;
     font-size: 25px;
     margin: auto;
@@ -475,7 +721,6 @@ body>div.selector>div.checkbar1>p {
     background-color: white;
     opacity: 0;
     pointer-events: none;
-
 }
 
 .enjoy span {
@@ -491,5 +736,4 @@ body>div.selector>div.checkbar1>p {
     font-family: "Gill Sans", Times, serif;
     font-weight: 100;
     color: #333;
-
 }
