@@ -1,7 +1,9 @@
 body {
-    font-family: "CCMonsterMash", Times, serif;
-    font-style: normal;
     font-size: 1em;
+
+    font-family: ccmonstermash, sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 #head {
@@ -65,6 +67,7 @@ body {
     font-weight: 100;
     color: #CBCD27;
 }
+
 
 
 
@@ -162,6 +165,7 @@ input {
 
 
 
+
 /* .sliderNamePart>* {
     display: table-cell;
     vertical-align: middle;
@@ -207,6 +211,7 @@ body>div.selector>div>div.checkbar1>p {
 
 
 
+
 /* range Ios begin */
 
 input[type=range] {
@@ -222,6 +227,7 @@ input[type=range] {
 input[type=range]:focus {
     outline: none;
 }
+
 
 
 
@@ -305,6 +311,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 
 
+
 /* All the same stuff for Firefox */
 
 input[type=range]::-moz-range-thumb {
@@ -325,6 +332,7 @@ input[type=range]::-moz-range-track {
     background-color: #a9acb1;
     border-radius: 15px;
 }
+
 
 
 
@@ -432,6 +440,7 @@ input[type=range]::-ms-tooltip {
 
 
 
+
 /* range Ios end*/
 
 .sliderName {
@@ -474,6 +483,7 @@ input[type=range]::-ms-tooltip {
     /* width: 159px; */
     width: 70%;
 }
+
 
 
 
@@ -609,6 +619,7 @@ input[type=range]::-ms-tooltip {
 
 
 
+
 /* ios check end*/
 
 .result {
@@ -672,6 +683,7 @@ input[type=range]::-ms-tooltip {
     font-size: 1.2em;
     color: #FFFFFF;
 }
+
 
 
 
