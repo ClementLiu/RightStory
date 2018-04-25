@@ -1,2 +1,1 @@
-# Sticker
-https://clementliu.github.io/RightStory/
+Only while sleeping one makes no mistakes. Making mistakes is the privilege of the active—of those who can correct their mistakes and put them right.
